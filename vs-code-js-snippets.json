@@ -1,0 +1,21 @@
+{
+  "Destructure props cc": {
+    "prefix": "dprops",
+    "body": ["const { } = this.props"],
+    "description": "Destructure props"
+  },
+  "Destructure state cc": {
+    "prefix": "dstate",
+    "body": [
+      "const { } = this.state"
+    ],
+    "description": "Destructure state"
+  },
+  "Destructure props fc": {
+    "prefix": "fprops",
+    "body": [
+      "const { } = props"
+    ],
+    "description": "Destructure props"
+  }
+}
