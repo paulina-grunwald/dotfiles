@@ -1,0 +1,46 @@
+{
+  "Show PHP Errors": {
+    "scope": "php",
+    "prefix": "perr",
+    "body": [
+      "ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);"
+    ],
+    "description": "Show PHP Errors"
+  },
+  "Php tag": {
+    "scope": "php",
+    "prefix": "ptag",
+    "body": ["<?php $1 ?>"],
+    "description": "PHP opening tag"
+  },
+  "class …": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName} ${2:extends ${3:AnotherClass}} ${4:implements ${5:Interface}}",
+      "{",
+      "\t$0",
+      "}",
+      ""
+    ],
+    "description": "Class definition"
+  },
+  // functions and loops
+  "function __construct": {
+    "prefix": "con",
+    "body": [
+      "${1:public} function __construct(${2:${3:Type} $${4:var}${5: = ${6:null}}}) {",
+      "\t\\$this->${4:var} = $${4:var};$0",
+      "}"
+    ]
+  },
+  "do … while …": {
+    "prefix": "do",
+    "body": ["do {", "\t${0:# code...}", "} while (${1:$${2:a} <= ${3:10}});"],
+    "description": "Do-While loop"
+  },
+  "while …": {
+    "prefix": "while",
+    "body": ["while (${1:$${2:a} <= ${3:10}}) {", "\t${0:# code...}", "}"],
+    "description": "While-loop"
+  }
+}
