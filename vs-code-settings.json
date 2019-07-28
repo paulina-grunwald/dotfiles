@@ -91,5 +91,47 @@
   // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
   "prettier.disableLanguages": ["javascript", "javascriptreact"],
   "typescript.preferences.quoteStyle": "single",
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "keyboard.dispatch": "keyCode",
+  
+  
+  ///// VIM settings /////
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [" "],
+      "after": ["leader", "leader", "leader", "b", "d", "w"],
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    // "<C-d>": false
+  },
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.moveAndSelectMatch",
+      "sequence": [
+        "editor.action.moveSelectionToNextFindMatch",
+        "editor.action.addSelectionToNextFindMatch"
+      ]
+    }
+  ],
+  "editor.lineNumbers": "on",
 }
